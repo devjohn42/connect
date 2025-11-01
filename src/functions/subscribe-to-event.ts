@@ -7,10 +7,7 @@ interface SubscribeToEventParams {
   email: string
 }
 
-export async function subscribeToEvent({
-  name,
-  email,
-}: SubscribeToEventParams) {
+export async function subscribeToEvent({ name, email }: SubscribeToEventParams) {
   const subscribers = await db
     .select()
     .from(subscriptions)

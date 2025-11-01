@@ -27,6 +27,8 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async (app) => {
 
       await accessInviteLink({ subscriberId })
 
+      console.log(await redis.hgetall('referral:access-count'))
+
       const redirectUrl = new URL(env.WEB_URL)
       redirectUrl.searchParams.set('referrer', subscriberId)
 
