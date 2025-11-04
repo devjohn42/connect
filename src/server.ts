@@ -8,12 +8,12 @@ import {
 } from 'fastify-type-provider-zod'
 import { fastifySwagger } from '@fastify/swagger'
 import { fastifySwaggerUi } from '@fastify/swagger-ui'
-import { subscribeToEventRoute } from './http/subscribe-to-event.js'
+import { subscribeToEventRoute } from './http/subscribe-to-event.route.js'
 import { env } from './env.js'
-import { accessInviteLinkRoute } from './http/access-invite-link.js'
-import { GetSubscriberInviteClicksRoute } from './http/get-subscriber-invite-clicks.js'
-import { GetSubscriberInviteCountRoute } from './http/get-subscriber-invites-count.js'
-import { GetSubscriberRankingPositionRoute } from './http/get-subscriber-ranking-position.js'
+import { accessInviteLinkRoute } from './http/access-invite-link.route.js'
+import { GetSubscriberInviteClicksRoute } from './http/get-subscriber-invite-clicks.route.js'
+import { GetSubscriberInviteCountRoute } from './http/get-subscriber-invites-count.route.js'
+import { GetSubscriberRankingPositionRoute } from './http/get-subscriber-ranking-position.route.js'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
