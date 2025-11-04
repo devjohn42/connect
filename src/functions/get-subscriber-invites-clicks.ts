@@ -4,7 +4,7 @@ interface GetSubscriberInviteClicksParams {
   subscriberId: string
 }
 
-export async function GetSubscriberInviteClicks({
+export async function getSubscriberInviteClicks({
   subscriberId,
 }: GetSubscriberInviteClicksParams) {
   // await redis.hincrby('referral:access-count', subscriberId, 1)

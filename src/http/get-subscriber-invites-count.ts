@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
-import { GetSubscribersInvitesCount } from '../functions/get-subscriber-invites-count.js'
+import { getSubscribersInvitesCount } from '../functions/get-subscriber-invites-count.js'
 
 export const GetSubscriberInviteCountRoute: FastifyPluginAsyncZod = async (app) => {
   app.get(
@@ -23,7 +23,7 @@ export const GetSubscriberInviteCountRoute: FastifyPluginAsyncZod = async (app) 
     async (request) => {
       const { subscriberId } = request.params
 
-      const { count } = await GetSubscribersInvitesCount({ subscriberId })
+      const { count } = await getSubscribersInvitesCount({ subscriberId })
 
       return { count }
     },
