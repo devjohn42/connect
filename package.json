@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch --env-file .env src/server.ts",
+    "build": "tsup-node && node --env-file .env dist/server.js",
     "drizzle:generate": "tsx node_modules/drizzle-kit/bin.cjs generate",
     "drizzle:migrate": "tsx node_modules/drizzle-kit/bin.cjs migrate"
   },
@@ -28,6 +29,7 @@
     "@types/node": "^24.6.1",
     "drizzle-kit": "^0.31.5",
     "eslint": "8.57.1",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
