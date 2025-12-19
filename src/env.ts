@@ -5,6 +5,7 @@ const envSchema = z.object({
   POSTGRES_URL: z.url(),
   REDIS_URL: z.url(),
   WEB_URL: z.url(),
+  OPENAI_API_KEY: z.string(),
 })
 
 export const env = envSchema.parse(process.env)
